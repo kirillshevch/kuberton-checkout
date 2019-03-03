@@ -1,0 +1,7 @@
+<div class='clearfix'>
+  Thanks for your order. Please <a target='_parent' href='<%= ENV['SHOP_COMPLETE_PATH'] %>'>click this link</a> to get back to the store if if didn't happen automatically.
+</div>
+
+<script>
+window.top.location.href = "<%= ENV['SHOP_COMPLETE_PATH'] %>";
+</script>

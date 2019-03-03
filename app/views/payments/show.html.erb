@@ -1,2 +1,4 @@
-<h1>Payment Page</h1>
-<%= session[:order] %>
+<script>
+window.current_order = <%= session[:order].to_json.html_safe %>;
+</script>
+<div id='app'></div>
