@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  post 'auth', to: 'auth#create'
+  get 'auth', to: 'auth#show'
   resource :payment, only: %w[show]
 end
