@@ -14,12 +14,12 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/0' }
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_STORE_URL'] }
   config.session_store :cache_store, key: 'kubershop'
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  # config.require_master_key = true
+  config.require_master_key = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
