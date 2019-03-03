@@ -16,7 +16,7 @@ Rails.application.configure do
   # Run rails dev:cache to toggle caching.
   config.action_controller.perform_caching = true
 
-  config.cache_store = :redis_cache_store, { url: 'redis://localhost:6379/0' }
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_STORE_URL'] }
   config.session_store :cache_store, key: 'kubershop'
 
   # Don't care if the mailer can't send.
